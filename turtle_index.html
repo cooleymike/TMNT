@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Teenage Mutant Ninja Turtles</title>
+
+    <!--<link href="Content/bootstrap.css" rel="stylesheet" />-->
+    <link href="Style.css" rel="stylesheet" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <!--<link href="css/simple-sidebar.css" rel="stylesheet" />-->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://contact413nr.firebaseio-demo.com/.json"></script>
+    <script src="https://cdn.firebase.com/js/client/1.1.2/firebase.js"></script>
+    <!--
+    This demo has 2 full CRUD scripts. Be sure to change the paths/firebase urls as needed.
+        - myToDos_v1.js         - global scope
+        - myToDos_v2.js         - local scope via IIFE
+        - myToDos_v2_other.js   - local scope via IIFE, rendering on the same page
+
+    -->
+</head>
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="#">Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="#">Separated link</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="#">One more separated link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" />
+                            </div> <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+
+
+
+            <!--turtle profile -->
+
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-4 column">
+                        <h1>
+                            <div id="profile">Turtle's Profile</div>
+
+
+                            <hr />
+                            <img src="http://assets.rollingstone.com/assets/2014/media/164375/_original/1035x1152-T8DTEMU_EC001_H.JPG" class="img-rounded" align="right">
+                            <br />
+                            <br />
+
+                        </h1>
+                        <p></p>
+                        <p>
+
+                            Username: Don       <br />
+                            Name: Donatello    <br />
+                            Weapon: Bō staff    <br />
+                            <br />
+
+                            Nickname: Leo   <br />
+                            Name: Leonardo  <br />
+                            Weapon: Ninjato  <br />
+
+                        </p>
+
+                    </div>
+                    <!-- ALL Turtle Messages -->
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <span class="glyphicon glyphicon-comment"></span> Send
+                                <div class="btn-group pull-right">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </button>
+                                    <ul class="dropdown-menu slidedown">
+                                        <li>
+                                            <a href="http://www.jquery2dotnet.com">
+                                                <span class="glyphicon glyphicon-refresh">
+                                                </span>Refresh
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.jquery2dotnet.com">
+                                                <span class="glyphicon glyphicon-ok-sign">
+                                                </span>Available
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.jquery2dotnet.com">
+                                                <span class="glyphicon glyphicon-remove">
+                                                </span>Busy
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.jquery2dotnet.com">
+                                                <span class="glyphicon glyphicon-time"></span>
+                                                Away
+                                            </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="http://www.jquery2dotnet.com">
+                                                <span class="glyphicon glyphicon-off"></span>
+                                                Sign Out
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="chat">
+                                    <li class="left clearfix">
+                                        <span class="chat-img pull-left">
+                                            <img src="http://assets.rollingstone.com/assets/2014/media/164375/_original/1035x1152-T8DTEMU_EC001_H.JPG" height="100" width="100" class="img-circle">
+                                        </span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <strong class="primary-font">Mike</strong>
+                                                <small class="pull-right text-muted">
+                                                    <span class="glyphicon glyphicon-time"></span>12 mins ago
+                                                </small>
+                                            </div>
+                                            <p>
+                                                Greetings...
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li id="myChirp" class="left clearfix">
+                                        <!--<span class="chat-img pull-left">
+                                            <img src="http://assets.rollingstone.com/assets/2014/media/164375/_original/1035x1152-T8DTEMU_EC001_H.JPG" alt="User Avatar" class="img-circle" />
+                                        </span>-->
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <!--<strong id="myUser" class="primary-font"></strong>-->
+                                                <!--<small class="pull-right text-muted">
+                                                    <span class="glyphicon glyphicon-time"></span>12 mins ago
+                                                </small>-->
+                                            </div>
+                                            <!--<p>
+                                            </p>-->
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="input-group">
+                                    <input id="todotext" type="text" class="form-control input-sm" placeholder="Type your username here..." />
+                                    <input id="todocompleted" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" id="addtodo" onclick="doaddtodo()" class="btn btn-success">Chirp</button>
+                                        <!--<button class="btn btn-warning btn-sm" id="btn-chat">-->
+                                        Send
+                                        <!--</button>-->
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FRIENDS -->
+                    <div class="container">
+                        <div class="row clearfix">
+                            <div class="col-md-4 column">
+                                <h1>
+                                    <div id="profile">Turtle's Profile</div>
+
+
+                                    <hr />
+                                    <img src="http://assets.rollingstone.com/assets/2014/media/164375/_original/1035x1152-T8DTEMU_EC001_H.JPG" class="img-rounded" align="right">
+                                    <br />
+                                    <br />
+                                    </p>
+                            </div>
+
+
+                            <p>
+
+
+                                Username: Mike       <br />
+                                Name: Michelangelo    <br />
+                                Weapon: nunchuks    <br />
+                                <br />
+
+                                Nickname: Raph   <br />
+                                Name: Raphael  <br />
+                                Weapon: sai  <br />
+
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <table class='table table-bordered table-condensed table-striped'>
+            <tr>
+                <td>Michelangelo <button>Send</button></td>
+            </tr>
+            <tr>
+                <td>Rafael<button>Send</button></td>
+            </tr>
+            <tr>
+                <td>Leonardo<button>Send</button></td>
+            </tr>
+
+            <td>
+            <td>
+                Donatello<button>Send</button><button onclick='dodeletetodo class=' btn btn-xs btn-danger'>Delete</button>
+
+            </td>
+
+            </tr>
+            <!-- END OF CONTENT -->
+            <!-- /#page-content-wrapper -->
+            <!--<label>Username</label><br />-->
+            <!--<input type="text" id="todotext" placeholder="username" /><br />-->
+            <!--<label>Chirp</label><br />-->
+            <!--<input type="text" id="todocompleted" placeholder="chirp text" /><br />-->
+            <!--<button id="addtodo" onclick="doaddtodo()" class="btn btn-success">ADD</button>-->
+            <!--<button id="savetodo" onclick="dosavetodo()" class="btn btn-primary">Save Changes</button>-->
+            <!--Needs to be unique to the CRUD script-->
+            <div id="ToDoList"> </div>
+
+            <hr />
+            <!--Needs to be unique to the CRUD script-->
+            <!--<div id="ToDoList2"> </div>-->
+            <!-- full CRUD for todos -->
+            <!--<script src="myToDos_v2.js"></script>-->
+            <!-- efficent DB  -->
+            <script src="js/scripts.js"></script>
+            <!--<script src="myToDos_v1.js"></script>-->
+            <!--<script src="myToDos_v3.js"></script>-->
+
+</body>
+</html>
